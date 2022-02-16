@@ -22,3 +22,10 @@
      }
      return count;
  }
+
+ //compare two arrays of strings and return an array of matching words
+function justCoolStuff(arr1, arr2) {
+    return arr1.filter(word => {
+      return arr2.includes(word);
+    })
+  }
