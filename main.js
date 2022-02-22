@@ -49,3 +49,20 @@ function justCoolStuff(arr1, arr2) {
     return finalString;
     
     }
+
+    /* a function that takes a number as input and prints fizz for numbers that 
+    are multiples of 3, buzz for 5, and fizzbuzz for both, otherwise prints 1 to num */
+
+    function fizzBuzz(num) {
+      if (num % 3 === 0 && num % 5 === 0) {
+        console.log('Fizzbuzz');
+      } else if (num % 3 === 0) {
+        console.log('Fizz');
+      } else if (num % 5 === 0) {
+        console.log('Buzz');
+      } else {
+        for (let i = 1; i <= num; i++) {
+          console.log(i);
+        }
+      }
+    }
