@@ -89,7 +89,7 @@ function justCoolStuff(arr1, arr2) {
     }
 
     // a function that filters out non-numbers from an array and returns a new array with the remaining numbers
-    function filter_list(arr) {
+    function filterList(arr) {
       return arr.filter((element) => {
         if (typeof element === 'number') {
           return element;
