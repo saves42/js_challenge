@@ -97,3 +97,21 @@ function justCoolStuff(arr1, arr2) {
      })
         
     }
+
+// calculate a persons age in a given year
+function howOld(age, year) {
+  const currentYear = 2022;
+  if (year > currentYear) {
+    return `You will be ${age + (year - currentYear)} in the year ${year}`;
+  } else if (year < currentYear) {
+      if ((currentYear - year) > age) {
+        return `The year ${year} was ${(currentYear - year) - age} years before you were born`;
+  } else if (currentYear - year === age) {
+    return `You were born in ${year}`;
+  } else {
+     return `You were ${age - (currentYear - year)} in the year ${year}`;
+   }
+  } else if (currentYear === year) {
+    return `You are ${age}`;
+  }
+}
