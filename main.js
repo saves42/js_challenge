@@ -115,3 +115,13 @@ function howOld(age, year) {
     return `You are ${age}`;
   }
 }
+
+/* Complete a function that takes a boolean value and returns 'Yes' string for true 
+   or a 'No' string for false */
+function boolToWord( bool ){
+  if (bool) {
+    return 'Yes'
+  } else {
+    return 'No'
+  }
+}
