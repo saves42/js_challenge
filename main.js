@@ -125,3 +125,8 @@ function boolToWord( bool ){
     return 'No'
   }
 }
+
+//sort an array in descending order (.sort((a, b) => a - b) ascending)
+function sortYears(arr) {
+  return arr.sort((a, b) => b - a)
+}
