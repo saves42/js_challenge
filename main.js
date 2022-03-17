@@ -130,3 +130,13 @@ function boolToWord( bool ){
 function sortYears(arr) {
   return arr.sort((a, b) => b - a)
 }
+
+//adds baby to an array of words
+function convertToBaby(arr) {
+  const baby = 'baby';
+  const babyArray = [];
+  for (i = 0; i < arr.length; i++) {
+    babyArray.push(baby.concat(' ', arr[i]));  
+  }
+  return babyArray;
+}
