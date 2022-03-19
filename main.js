@@ -140,3 +140,12 @@ function convertToBaby(arr) {
   }
   return babyArray;
 }
+
+//capitalize and add exclamation point 
+function shoutGreetings(arr) {
+  const newArray = arr.map(element => {
+    return element.toUpperCase().concat('','!');
+    
+  })
+  return newArray;
+}
