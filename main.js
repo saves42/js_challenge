@@ -1,3 +1,61 @@
+/*unit test example*/
+
+// object to be tested-----------
+// Define a rooster
+Rooster = {};
+
+// Return a morning rooster call
+Rooster.announceDawn = () => {
+  return 'cock-a-doodle-doo!';
+}
+
+// Return hour as string
+// Throws Error if hour is not between 0 and 23 inclusive
+Rooster.timeAtDawn = (hour) => {
+  if (hour < 0 || hour > 23) {
+    throw new RangeError;
+  } else {
+    return hour.toString();
+  };
+}
+
+module.exports = Rooster;
+
+// unit test----------------------
+// import assert method and Rooster object
+const assert = require('assert')
+const Rooster = require('../index')
+
+// describe Rooster object to be test and nest methods to be tested
+describe('Rooster', () => {
+  describe('.announceDawn', () => {
+    // it('description of test', () => {test})
+    it('returns a rooster call', () => {
+      // create variables for comparison
+      const expected = 'cock-a-doodle-doo!';
+      const actual = Rooster.announceDawn()
+      // compare for test results
+      assert.strictEqual(actual, expected);
+    })
+  })
+  describe('.timeAtDawn', () => {
+    it('returns its argument as a string', () => {
+      const expected = '4'
+      const actual = Rooster.timeAtDawn(4);
+      assert.strictEqual(actual, expected);
+    })
+    it('throws an error if passed a number less than 0', () => {
+      const hour = -1;
+      // assert.throws(anonymous function that calls method, expected Error)
+      assert.throws( () => {Rooster.timeAtDawn(hour);}, RangeError)
+    })
+    it('throws an error if passed a number greater than 23', () => {
+      const hour = 24;
+      assert.throws( () => {Rooster.timeAtDawn(hour);}, RangeError)
+    })
+  })
+})
+
 /*Complete the solution so that it returns true if the first argument(string)
  passed in ends with the 2nd argument (also a string).*/
  function solution(str, ending) {
