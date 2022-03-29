@@ -207,3 +207,17 @@ function shoutGreetings(arr) {
   })
   return newArray;
 }
+
+// factorial calculator
+function factorial(num) {
+  let i = num;
+  let fact = num;
+  while (i > 1) {
+    i -= 1;
+    fact *= i;
+  }
+  if (num == 0) {
+    fact = 1
+  }
+  return fact
+}
